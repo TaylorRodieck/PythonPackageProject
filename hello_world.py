@@ -22,6 +22,7 @@ type_defs = gql(
         name: String!
         genre: String!
         years: String!
+        artist: String!
     }
    """
 )
@@ -47,7 +48,7 @@ def places(*_):
 @query.field("songs")
 def songs(*_):
    return [
-      {"name":"All Night Long", "genre":"R&B", "years":"1997"},
+      {"name":"All Night Long", "genre":"R&B", "years":"1997", "artist":"Lionel Richie"},
    ]
 
 # Create executable schema
